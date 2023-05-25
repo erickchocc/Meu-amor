@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa de 8 meses de namoro</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+ 
+
+</head>
+<body>
+    <header>
+        <h1>Surpresa de 8 meses de namoro</h1>
+    </header>
+
+    <main>
+        <div class="photo">
+            <img src="https://i.imgur.com/H2RPVaG.jpg" alt="amor">
+        </div>
+
+        <div class="quiz">
+            <h2>Responda as perguntas para continuar:
+                <p id="textinho">OBS: As respostas precisam estar corretas para avançar para a próxima etapa!</p>
+            </h2>
+            <form onsubmit="return verificarRespostas(event)">
+                <label for="pergunta1">Qual a data em que nos vimos pessoalmente pela primeira vez? <br> (DD-MM-AAAA)  </label>
+                <input type="text" id="pergunta1" required>
+
+                <label for="pergunta2">Qual foi o dia em que te pedi em namoro? (DD-MM-AAAA) </label>
+                <input type="text" id="pergunta2" required>
+
+              <label for="pergunta3">O que comemos juntos em nosso primeiro encontro? Porção? Hamburger? Açai? </label>
+                <input type="text" id="pergunta3" required> 
+                
+                <label for="pergunta4"> Quem deu o primeiro selinho? Anaianzy ou Erick</label>
+                <input type="text" id="pergunta4" required> 
+
+                <input type="submit" value="Enviar">
+
+            
+            </form>
+        </div>
+
+
+
+
+        <div id="resultado" class="hidden">
+            <div class="result">
+                <h2>Parabéns!</h2>
+                <p>Você acertou as respostas!</p>
+                <br> 
+                <p>Você participará de uma nova brincadeira</p>
+                <div class="message">
+                    <p><a href="surpresa2.html">Clique nesse link para acessar a nova brincadeira</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="putaerro" class="hidden">Respostas incorretas. Por favor, tente novamente.
+
+        </div>
+
+    </main>
+</body>
+</html>
