@@ -133,7 +133,13 @@ input[type="submit"]:hover {
     color: #333;
 }
 
-#error-message {
+#errada {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.errada {
     color: red;
     font-weight: bold;
     margin-top: 20px;
