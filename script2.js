@@ -1,10 +1,4 @@
 function verificarRespostas2() {
-    // Remove the "errada" class from all questions
-    const perguntas = document.getElementsByClassName('quiz');
-    for (let i = 0; i < perguntas.length; i++) {
-        perguntas[i].classList.remove('errada');
-    }
-
     // Remove the previous error message, if any
     const mensagemErro = document.getElementById('mensagem-erro');
     if (mensagemErro) {
@@ -32,17 +26,6 @@ function verificarRespostas2() {
 
     let todasRespostasCorretas = true;
 
-    // Check if all questions are answered
-    const respostasSelecionadas = document.querySelectorAll('input[type="radio"]:checked').length;
-    const totalRespostas = Object.keys(respostas).length;
-
-    if (respostasSelecionadas !== totalRespostas) {
-        const resultado = document.getElementById('resultado');
-        resultado.innerHTML = '<h2>Resultado</h2><p>Por favor, responda todas as perguntas antes de verificar as respostas.</p>';
-        resultado.classList.remove('hidden');
-        return; // Stop further execution
-    }
-
     // Iterate through each question form and check the selected answer
     for (let i = 1; i <= Object.keys(respostas).length; i++) {
         const formId = 'pergunta' + i;
@@ -67,5 +50,3 @@ function verificarRespostas2() {
     }
     resultado.classList.remove('hidden');
 }
-
-
